@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #wrap {
+        width: 520px;
+        height: 360px;
+        overflow: hidden;
+      }
+
+      #slider {
+        position: relative;
+        left: 0;
+        width: 520px;
+        height: 360px;
+        object-fit: cover;
+        transition: all 0.5s;
+        opacity: 1;
+      }
+
+      #markers {
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      .marker {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #888;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+
+      .active {
+        background-color: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <img
+        id="slider"
+        src="images/landscape-photography-tips-yosemite-valley-feature.webp"
+      />
+    </div>
+    <div id="markers">
+      <span class="marker"></span>
+      <span class="marker"></span>
+      <span class="marker"></span>
+    </div>
+    <button id="prev">&lt;</button>
+    <button id="next">&gt;</button><br />
+    <button id="start">start</button><br />
+    <button id="stop">stop</button><br />
+    <script src="script.js" defer></script>
+  </body>
+</html>
